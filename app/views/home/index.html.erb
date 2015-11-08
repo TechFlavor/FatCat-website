@@ -1,0 +1,136 @@
+<body>
+
+  <div id="page-wrapper">
+
+    <div id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="6u 12u(mobile)">
+
+            <!-- Banner Copy -->
+            <p>We take pride in delivering high quality services related to audio, video, security, and home automation.</p>
+            <a href="#about" class="button-big">Learn more!</a>
+
+          </div>
+          <div class="6u 12u(mobile)">
+
+            <!-- Banner Image -->
+            <a href="#" class="bordered-feature-image"><%= image_tag "//lorempixel.com/570/190" %></a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div id="features-wrapper">
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul style="text-align: center;">
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                        <li><%= image_tag "//lorempixel.com/420/250" %></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                <p class="jcarousel-pagination"></p>
+            </div>
+    </div>
+
+    <!-- Content -->
+    <div id="about"></div>
+    <div id="content-wrapper">
+      <div id="content">
+        <div class="container">
+          <div class="row">
+            <div class="4u 12u(mobile)">
+              <section id="who-we-are" style="display:none;">
+                <header>
+                  <h2>Who We Are</h2>
+                  <h3>Tiger fans at your service!</h3>
+                </header>
+                <a href="#" class="feature-image"><%= image_tag "//lorempixel.com/325/125" %></a>
+                <p>
+                  We are a locally operated, U.S. Veteran owned business based in Baton Rouge, La. Our goal is to provide high quality technology, cabling, and surveillance systems at a competetive cost without cutting corners. We believe properly run and labeled cable installations are a priority for not only appeal, but also safety and security. 
+                </p>
+              </section>
+            </div>
+            <div class="4u 12u(mobile)">
+              <section id="what-we-do" style="display:none;">
+                <header>
+                  <h2>What We Do</h2>
+                  <h3>We bring the future to your home!</h3>
+                </header>
+                <ul class="check-list">
+                  <li>Cabling</li>
+                  <li>Audio/Video</li>
+                  <li>Video Surveillance</li>
+                  <li>Smart Home Integration</li>
+                  <li>And Much More!</li>
+                </ul>
+              </section>
+            </div>
+            <div class="4u 12u(mobile)">
+              <section id="what-people-say" style="display:none;">
+                <header>
+                  <h2>What People Are Saying</h2>
+                  <h3>Testimonials from your community...</h3>
+                </header>
+                <ul class="quote-list">
+                  <li>
+                    <%= image_tag "//lorempixel.com/70/70" %>
+                    <p>"The best cabling work available anywhere!"</p>
+                    <span>Mark B., Owner - Mark's Maintenance</span>
+                  </li>
+                  <li>
+                    <%= image_tag "//lorempixel.com/70/70" %>
+                    <p>"Excellent customer service! Will use Fat Cat Technology again!"</p>
+                    <span>Curtis C., CEO - Louisiana Land Surveying</span>
+                  </li>
+                  <li>
+                    <%= image_tag "//lorempixel.com/70/70" %>
+                    <p>"Friendly, knowledgable, and easy-to-reach!"</p>
+                    <span>Karen A., Manager - Hollingsworth Trucks</span>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title text-center" style="font-size: 2em;">Contact Us</h4>
+      </div>
+      <div class="modal-body text-center">
+        <%= simple_form_for Contact.new do |f| %>
+          <%= f.input :name %>
+          <%= f.input :email %>
+          <%= f.input :message %>
+          <br />
+          <%= f.submit 'Send Email' %>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>

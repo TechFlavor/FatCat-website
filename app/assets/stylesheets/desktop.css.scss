@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 737px) {
 
-/* Basic */
+  /* Basic */
 
   body {
     min-width: 1200px;
@@ -12,12 +12,12 @@
     margin-bottom: 0 !important;
   }
 
-/* Wrappers */
+  /* Wrappers */
 
   #header-wrapper {
-    background: #3B4346 image-url("bg03.jpg");
-    border-bottom: solid 1px #272d30;
-    box-shadow: inset 0px -1px 0px 0px #51575a;
+    background: $dark-grey image-url("bg03.jpg");
+    border-bottom: solid 1px $dark-grey;
+    box-shadow: inset 0px -1px 0px 0px $medium-grey;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
   }
 
@@ -26,31 +26,29 @@
   }
 
   #features-wrapper {
-    background: #353D40 image-url("bg02.jpg");
-    border-bottom: solid 1px #272e31;
+    background: $dark-grey image-url("bg02.jpg");
+    border-bottom: solid 1px $dark-grey;
     padding: 45px 0 45px 0;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.75);
   }
 
   #content-wrapper {
-    background: #f7f7f7 image-url("bg04.png");
-    border-top: solid 1px #fff;
+    background: $off-white image-url("bg04.png");
+    border-top: solid 1px $off-white;
     padding: 45px 0 45px 0;
   }
 
   #footer-wrapper {
     padding: 45px 0 45px 0;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 1px 1px 1px $off-white;
   }
 
-/* Header */
+  /* Header */
 
   #header {
     min-height: 125px;
     position: relative;
-  }
-
-    #header h1 {
+    & h1 {
       position: absolute;
       left: 0;
       bottom: 35px;
@@ -59,143 +57,94 @@
       letter-spacing: 4px;
     }
 
-      #header h1 a {
-        color: #FFFF66;
-        text-decoration: none;
-      }
-
-    #header nav {
+    & nav {
       position: absolute;
       right: 0;
       bottom: 35px;
       font-weight: 200;
     }
 
-      #header nav a {
-        color: #FFF;
-        text-decoration: none;
-        font-size: 1.4em;
-        margin-left: 60px;
-        outline: 0;
-      }
-
-        #header nav a:hover {
-          color: #FFFF66;
-        }
+    & nav a {
+      font-size: 1.4em;
+      margin-left: 60px;
+      outline: 0;
+    }
+  }
 
 /* Banner */
 
   #banner {
-    border-top: solid 1px #222628;
-    box-shadow: inset 0px 1px 0px 0px #3e484a;
+    border-top: solid 1px $dark-grey;
+    box-shadow: inset 0px 1px 0px 0px $medium-grey;
     padding: 35px 0 35px 0;
-    color: #fff;
-  }
-
-    #banner .bordered-feature-image {
+    & .bordered-feature-image {
       margin-bottom: 0;
     }
 
-    #banner p {
+    & p {
       font-size: 2em;
       font-weight: 200;
       line-height: 1.25em;
       padding-right: 1em;
       margin: 0 0 1em 0;
     }
+  }
 
-/* Features */
+  /* Features */
 
   #features {
     font-family: 'Lato', sans-serif;
-    color: #000;
+    & h2 {
+      font-size: 1.25em;
+      margin: 0 0 0.25em 0;
+    }
   }
 
-    #features h2 {
-      font-size: 1.25em;
-      color: #8000FF;
+  /* Content */
+
+  #content {
+    & section {
+      padding: 40px 30px 45px 30px;
+      box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
+      margin: 0 0 10% 0;
+    }
+
+    & h2 {
+      font-size: 1.8em;
       margin: 0 0 0.25em 0;
     }
 
-    #features a {
-      color: #8000FF;
-      &:hover {
-        color: #FFFF00
-      }
+    & h3 {
+      font-size: 1.25em;
     }
 
-    #features strong {
-      color: #8000FF;
+    & header {
+      margin: 0 0 2em 0;
     }
-
-/* Content */
-
-  #content section {
-    background: #fff;
-    padding: 40px 30px 45px 30px;
-    box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
-    margin: 0 0 10% 0;
   }
 
-  #content h2 {
-    font-size: 1.8em;
-    color: #373f42;
-    margin: 0 0 0.25em 0;
-  }
-
-  #content h3 {
-    color: #96a9b5;
-    font-size: 1.25em;
-  }
-
-  #content a {
-    color: #ED391B;
-  }
-
-  #content header {
-    margin: 0 0 2em 0;
-  }
-
-/* Footer */
+  /* Footer */
 
   #footer {
-    color: #fff;
     text-shadow: none;
-  }
-
-    #footer h2 {
+    & h2 {
       font-size: 1.25em;
-      color: #FFFF66;
       margin: 0 0 1em 0;
     }
-
-    #footer a {
-      color: #FFF;
-    }
-
-    #footer a:hover {
-      color: #FFFF66;
-    }
-
-/* Copyright */
-
-  #copyright {
-    border-top: solid 1px #b5bec3;
-    box-shadow: inset 0px 1px 0px 0px #e0e4e7;
-    text-align: center;
-    padding: 45px 0 80px 0;
-    color: #FFFF66;
   }
 
-    #copyright a {
-      color: #FFF;
-      text-decoration: none;
+  /* Copyright */
+
+  #copyright {
+    border-top: solid 1px $light-grey;
+    box-shadow: inset 0px 1px 0px 0px $off-white;
+    text-align: center;
+    padding: 45px 0 80px 0;
+    & a {
       font-weight: 600;
       text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
     }
+  }
 
-    #copyright a:hover {
-      color: #FFFF66;
-    }
 
 }

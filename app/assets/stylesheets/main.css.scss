@@ -2,6 +2,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import url(https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:400);
 
+$black: #000000;
+$purple: #8000FF;
+$red: #ED391B;
+$light-grey: #96A9B5;
+$medium-grey: #3E484A;
+$dark-grey: #3B4346;
+$off-white: #F7F7F7;
+$yellow: #FFFF66;
+
 /* Reset */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -55,7 +64,7 @@ body {
 
 body {
 	background: #99bcff image-url("bg03.jpg");
-	color: #474f51;
+	color: $medium-grey;
 	font-size: 13.5pt;
 	font-family: 'Yanone Kaffeesatz';
 	line-height: 1.85em;
@@ -67,7 +76,7 @@ footer {
 }
 
 input, textarea, select {
-	color: #474f51;
+	color: $medium-grey;
 	font-size: 13.5pt;
 	font-family: 'Yanone Kaffeesatz';
 	line-height: 1.85em;
@@ -80,11 +89,10 @@ ul, ol, p, dl {
 
 a {
 	text-decoration: none;
-}
-
-	a:hover {
+	&:hover {
 		text-decoration: none;
 	}
+}
 
 section > :last-child,
 .last-child {
@@ -95,79 +103,75 @@ section > :last-child,
 
 .link-list li {
 	padding: 0.2em 0 0.2em 0;
-}
-
-	.link-list li:first-child {
+	&:first-child {
 		padding-top: 0 !important;
 		border-top: 0 !important;
 	}
 
-	.link-list li:last-child {
+	&:last-child {
 		padding-bottom: 0 !important;
 		border-bottom: 0 !important;
 	}
+}
 
 .quote-list li {
 	padding: 1em 0 1em 0;
 	overflow: hidden;
 	text-align: right;
-}
-
-	.quote-list li:first-child {
+	&:first-child {
 		padding-top: 0 !important;
 		border-top: 0 !important;
 	}
 
-	.quote-list li:last-child {
+	&:last-child {
 		padding-bottom: 0 !important;
 		border-bottom: 0 !important;
 	}
 
-	.quote-list li img {
+	& img {
 		position: relative;
 		float: left;
 	}
 
-	.quote-list li p {
+	& p {
 		margin: 0 10px 0 90px;
 		font-size: 1.2em;
 		font-style: italic;
 	}
 
-	.quote-list li span {
+	& span {
 		display: block;
 		margin-left: 90px;
 		font-size: 0.9em;
 		font-weight: 400;
 	}
+}
 
 .check-list li {
 	padding: 0.7em 0 0.7em 45px;
 	font-size: 1.2em;
 	background: image-url("icon-checkmark.png") 0px 1.05em no-repeat;
-}
-
-	.check-list li:first-child {
+	&:first-child {
 		padding-top: 0 !important;
 		border-top: 0 !important;
 		background-position: 0 0.3em;
 	}
 
-	.check-list li:last-child {
+	&:last-child {
 		padding-bottom: 0 !important;
 		border-bottom: 0 !important;
 	}
+}
 
 .feature-image {
 	display: block;
 	margin: 0 0 2em 0;
 	outline: 0;
-}
-
-	.feature-image img {
+	& img {
 		display: block;
 		width: 100%;
 	}
+}
 
 .bordered-feature-image {
 	display: block;
@@ -176,12 +180,11 @@ section > :last-child,
 	box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
 	margin: 0 0 1.5em 0;
 	outline: 0;
-}
-
-	.bordered-feature-image img {
+	& img {
 		display: block;
 		width: 100%;
 	}
+}
 
 .button-big {
 	background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
@@ -199,9 +202,7 @@ section > :last-child,
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.75), inset 0px 2px 0px 0px rgba(255, 192, 192, 0.5), inset 0px 0px 0px 2px rgba(255, 96, 96, 0.85), 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
 	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.5);
-}
-
-	.button-big:hover {
+	&:hover {
 		background-image: -moz-linear-gradient(top, #fd492b, #de2a10);
 		background-image: -webkit-linear-gradient(top, #fd492b, #de2a10);
 		background-image: -ms-linear-gradient(top, #fd492b, #de2a10);
@@ -209,8 +210,7 @@ section > :last-child,
 		background-color: #fd492b;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.75), inset 0px 2px 0px 0px rgba(255, 192, 192, 0.5), inset 0px 0px 0px 2px rgba(255, 96, 96, 0.85), 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
 	}
-
-	.button-big:active {
+	&:active {
 		background-image: -moz-linear-gradient(top, #ce1a00, #ed391b);
 		background-image: -webkit-linear-gradient(top, #ce1a00, #ed391b);
 		background-image: -ms-linear-gradient(top, #ce1a00, #ed391b);
@@ -218,36 +218,107 @@ section > :last-child,
 		background-color: #ce1a00;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.75), inset 0px 2px 0px 0px rgba(255, 192, 192, 0.5), inset 0px 0px 0px 2px rgba(255, 96, 96, 0.85), 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
 	}
+}
+
+/* Header */
+
+#header {
+	& h1 a {
+	  color: $yellow;
+	}
+	& nav a {
+    color: $off-white;
+    &:hover {
+      color: $yellow;
+    }
+	}
+}
+
+/* Features */
+
+#features {
+  color: $black;
+  & h2, & a, & strong {
+    color: $purple;
+  }
+  & a:hover {
+    color: $yellow;
+  }
+}
+
+#banner {
+  color: $off-white;
+  & .mobile-banner {
+    display: none;
+  }
+}
 
 /* Content */
 
-#content .quote-list li {
-	border-bottom: solid 1px #e2e6e8;
-}
+#content {
+	& section {
+    background: $off-white;
+	}
+	& h2 {
+    color: $medium-grey;
+	}
+	& h3 {
+    color: $light-grey;
+	}
+	& a {
+    color: $red;
+	}
+	& .quote-list li {
+		border-bottom: solid 1px #e2e6e8;
+	}
 
-#content .link-list li {
-	border-bottom: solid 1px #e2e6e8;
-}
+	& .link-list li {
+		border-bottom: solid 1px #e2e6e8;
+	}
 
-#content .check-list li {
-	border-bottom: solid 1px #e2e6e8;
+	& .check-list li {
+		border-bottom: solid 1px #e2e6e8;
+	}
 }
 
 /* Footer */
 
-#footer .quote-list li {
-	border-top: solid 1px #e0e4e6;
-	border-bottom: solid 1px #b5bec3;
+#footer {
+  color: $off-white;
+  text-shadow: none;
+	& h2 {
+	  color: $yellow;
+	}
+	& a {
+	  color: $off-white;
+	  &:hover {
+		  color: $yellow;
+	  }
+	}
+  & .quote-list li {
+		border-top: solid 1px #e0e4e6;
+		border-bottom: solid 1px #b5bec3;
+		& .link-list li {
+			border-top: solid 1px #e0e4e6;
+			border-bottom: solid 1px #b5bec3;
+		}
+		& .check-list li {
+			border-top: solid 1px #e0e4e6;
+			border-bottom: solid 1px #b5bec3;
+		}
+	}
 }
 
-#footer .link-list li {
-	border-top: solid 1px #e0e4e6;
-	border-bottom: solid 1px #b5bec3;
-}
+/* Copyright */
 
-#footer .check-list li {
-	border-top: solid 1px #e0e4e6;
-	border-bottom: solid 1px #b5bec3;
+#copyright {
+  color: $yellow;
+  & a {
+    color: $off-white;
+    &:hover {
+    	color: $yellow;
+    }
+  }
 }
 
 .simple_form {
@@ -278,15 +349,19 @@ section > :last-child,
 }
 
 .field_with_errors {
-  background-color: #ff3333;
+  background-color: $red;
 }
 
 .alert {
 	text-align: center;
-	color: #FFFF00;
+	color: $yellow;
 	font-size: 1.5em;
 	padding-top: 30px;
 }
 button.close {
-	color: #FFFF00;
+	color: $yellow;
 }
+
+@import 'desktop';
+@import 'mobile';
+@import 'tablet';

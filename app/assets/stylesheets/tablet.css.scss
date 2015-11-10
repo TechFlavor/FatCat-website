@@ -4,77 +4,78 @@
 
 /* Basic */
 
-  body {
-    min-width: 1000px;
-  }
+body {
+  min-width: 1000px;
+}
 
 /* Multi-use */
 
-  .check-list li {
+.check-list li {
+  font-size: 1em;
+  line-height: 2em;
+}
+
+.quote-list li {
+  padding: 1em 0 1em 0;
+  & li img {
+    width: 60px;
+  }
+
+  & li p {
+    margin: 0 0 0 80px;
     font-size: 1em;
-    line-height: 2em;
+    font-style: italic;
+    line-height: 1.8em;
   }
 
-  .quote-list li {
-    padding: 1em 0 1em 0;
+  & li span {
+    display: block;
+    margin-left: 80px;
+    font-size: 0.8em;
+    font-weight: 400;
+    line-height: 1.8em;
   }
+}
 
-    .quote-list li img {
-      width: 60px;
-    }
+.feature-image {
+  margin: 0 0 1em 0;
+}
 
-    .quote-list li p {
-      margin: 0 0 0 80px;
-      font-size: 1em;
-      font-style: italic;
-      line-height: 1.8em;
-    }
-
-    .quote-list li span {
-      display: block;
-      margin-left: 80px;
-      font-size: 0.8em;
-      font-weight: 400;
-      line-height: 1.8em;
-    }
-
-  .feature-image {
-    margin: 0 0 1em 0;
-  }
-
-  .button-big {
-    font-size: 1.5em;
-    padding: 10px 35px 10px 35px;
-  }
+.button-big {
+  font-size: 1.5em;
+  padding: 10px 35px 10px 35px;
+}
 
 /* Banner */
 
-  #banner p {
-    font-size: 1.75em;
-  }
+#banner p {
+  font-size: 1.75em;
+}
 
 /* Header */
 
-  #header h1 {
+#header {
+  & h1 {
     font-size: 2.25em;
   }
-
-  #header nav a {
+  & nav a {
     font-size: 1.1em;
   }
+}
 
 /* Content */
 
-  #content h2 {
+#content {
+  & h2 {
     font-size: 1.4em;
   }
-
-  #content h3 {
+  & h3 {
     font-size: 1.1em;
   }
-
-  #content header {
+  & header {
     margin: 0 0 1.25em 0;
   }
+}
+
 
 }
